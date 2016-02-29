@@ -28,7 +28,7 @@ return {
     "tagall [msg]."
   },
   patterns = {
-    "^(فتوا به همه) +(.+)$",
+    "^[!/](tagall)+(.+)$",
   },
   run = run
 }
