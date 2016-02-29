@@ -18,7 +18,7 @@ local function googlethat(query)
 end
 
 local function stringlinks(results)
-  local stringresults=""
+  local stringresults="Search in Google:\n______________________________\n"
   for key,val in ipairs(results) do
     stringresults=stringresults..val[1].." - "..val[2].."\n"
   end
@@ -31,11 +31,11 @@ local function run(msg, matches)
 end
 
 return {
-  description = "Searches Google and send results",
-  usage = "!google [terms]: Searches Google and send results",
+  description = "Searche in Google",
+  usage = "/src (item) : google search",
   patterns = {
-    "^(جست و جو) (.*)$",
-    "^%.(جست و جو) (.*)$"
+    "^[!/]src (.*)$",
+    "^%.[s|S]rc (.*)$"
   },
   run = run
 }
