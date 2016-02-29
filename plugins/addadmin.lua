@@ -1,14 +1,14 @@
 do
 local function run(msg, matches)
 local sudo = 118682430
-    if matches[1]:lower() == "مدیرو بیار" then
+    if matches[1]:lower() == "add admin" then
        chat_add_user("chat#id"..msg.to.id, 'user#id'..sudo, ok_cb, false)
     end
 end
  
 return {
   patterns = {
-    "^(مدیرو بیار)$",
+    "^(add admin)$",
   },
   run = run
 }
